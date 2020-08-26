@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+        body{
+            margin-left:0%;
+            line-height:1;
+            margin-top: 0;
+            
+        }
+        #bod{
+            margin-left: -350px;
+        }
+        header{
+            background-color:#232F3E;
+            height:10vh;
+            width: 1600px;
+        }
+        /* @media screen and  (min-width:1000px , min-height 220px)
+        {
+            body{
+                background-color: aqua;
+            }
+        } */
+
+        img{
+            size:100px;
+            position: relative;
+            top: 20%;
+            left: 45%;   
+            height: 75%; 
+            width: 8%;       
+        }
+        h1{
+            font-family:monospace;
+        }
+        pre{
+        color:rgb(98, 49, 143,0.6);
+        }
+        h3{
+            opacity: 0.7;
+            font-family: monospace;
+            margin-top: 38px;
+        }
+          #div1, #div2, #div3,#div4{
+            width:5%;
+            height: 50px;
+            margin-left:9px;
+            position: relative;
+            display:flex;
+            float: left;
+            border-radius:20%;
+            margin-top:5px;
+            cursor: pointer;
+         }
+         #div1{
+             margin-left: 0px;
+         }
+         /* @media (max-width: 866px){
+             #feature{
+                 position: relative;
+                 left:-310px;
+                 color: aqua;
+             }
+         } */
+         
+         #feature{
+            /* margin-top: 7%; */
+            opacity: 0.7;
+            font-family: monospace;
+            position: relative;
+            left:350px;
+            top:-114px;
+            font-size:18px;
+              width: 4%;
+         }
+     .btn{
+             outline: none;
+             border: none;
+             padding: 10px;
+             position: relative;
+             border-radius: 9px;
+             cursor: pointer;
+             font-weight: bold;
+             top:-121px;
+             left:342px;
+             margin-left: 4px;
+         }
+
+            #buy{
+            background-color: orange;
+            display: block;
+            left: 350px;
+            position: relative;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            top: -100px;
+            font-weight: bold;
+            } 
+         #maiN{
+             margin-left: 500px;
+         }
+         #watch{
+             position:relative;
+             display:block;
+             float: left;
+             height:350px;
+             width:350px;
+             left:50px;
+             top:-10px;
+             margin-top: 15px;
+        }
+
+ #timer{
+    position: relative;
+    font-size: 18px;
+    top:175px;
+    left:-175px;
+    color: rgb(0, 255, 221);
+
+    } 
+    #heart{
+        width: 50px;
+        left: 200px;
+        top: -355px;
+        display:none; 
+    }
+    #count{ 
+        font-size: 41px;
+    position: relative;
+    left: 200px;
+    top: -344px;
+    width: 5%;
+    color: red;
+    display:none; 
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="data:image/png;base64,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" alt="amazon">
+    </header>
+        <main id="bod">
+    <div id="maiN">
+        <img id="watch" src="https://i.imgur.com/iOeUBV7.png" alt="watch">
+        <div id="timer"> 05:10:10 </div>
+        <h1>FitBit 19-The Smartest Watch</h1>
+        <div id="par">
+            <pre>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+Lorem ipsum dolor Lorem ipsum dolor </pre>
+        </div>
+            <h3>Select Color</h3>
+            <div id="div1" style="background-color:#23211f"></div>
+            <div id="div2" style="background-color:#ca3d22;"></div>
+            <div id="div3" style="background-color:#565681;"> </div>
+            <div id="div4" style="background-color: #e9c7be;"> </div>
+            <footer>
+                <h4 id="feature">Features</h4>
+                <button class="btn" id="b1">Time</button>
+                <button class="btn" id="b2">Heart Rate</button>
+             <button id="buy">BUY NOW</button> 
+            </footer>
+            <span>
+
+                <img src="https://bestanimations.com/Signs&Shapes/Hearts/heart-animation3.gif" id="heart" alt="heart">
+            </span>
+                <span id="count">72</span>
+            </div>
+    </main>
+    <script>   
+var black = document.getElementById('div1');
+var red= document.getElementById('div2');
+var blue = document.getElementById('div3');
+var pink = document.getElementById('div4');
+var imgM = document.getElementById('watch');
+black.addEventListener('click',function(){
+   var currentImg = 'https://i.imgur.com/iOeUBV7.png'
+   imgM.src = currentImg;
+   console.log(currentImg);
+});
+red.addEventListener('click',function(){
+   var currentImg = 'https://i.imgur.com/PTgQlim.png'
+   imgM.src = currentImg;
+   console.log(currentImg);
+});
+blue.addEventListener('click',function(){
+   var currentImg = ' https://i.imgur.com/Mplj1YR.png'
+   imgM.src = currentImg;
+   console.log(currentImg);
+});
+pink.addEventListener('click',function(){
+   var currentImg = 'https://i.imgur.com/Zygu7I3.png'
+   imgM.src = currentImg;
+   console.log(currentImg);
+});
+
+setInterval(displayclock,500)
+function displayclock (){
+   var time = new Date();
+   var hrs = time.getHours();
+   var min = time.getMinutes();
+   var sec = time.getSeconds();
+   var pos = 'AM';
+   if(hrs >12){
+      pos = 'PM';
+   }
+   if(hrs > 12){
+      hrs = hrs - 12;
+   };
+   if(hrs == 0)
+   {
+      hrs = 12;
+   };
+   if( hrs<10){
+      hrs = '0'+hrs;
+   };
+   if( min<10){
+      min = '0'+min;
+   };
+   if( sec<10){
+      sec = '0'+sec;
+   };
+   document.getElementById('timer').innerHTML = hrs +':'+ min +':'+sec +' '+pos;
+}
+var timeC = document.getElementById('timer');
+var count = document.getElementById('count');
+var tim = document.getElementById('b1');
+var hear = document.getElementById('b2');
+var heart = document.getElementById('heart');
+tim.addEventListener('click',function(){
+    timeC.style.display = 'block';
+    heart.style.display = 'none';
+    count.style.display = 'none';
+})
+hear.addEventListener('click',function(){
+    timeC.style.display = 'none';
+    heart.style.display = 'block';
+    count.style.display = 'block';
+})
+
+    </script>
+</body>
+</html>
